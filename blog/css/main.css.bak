@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 
 /*
@@ -31,14 +30,6 @@
 		list-style: none;
 	}
 
-	blockquote, q {
-		quotes: none;
-	}
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
 
 	table {
 		border-collapse: collapse;
@@ -58,13 +49,6 @@
 	}
 
 /* Basic */
-
-	@media screen and (max-width: 480px) {
-
-		html, body {
-			min-width: 320px;
-		}
-
 	}
 
 	body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -135,23 +119,6 @@
 		text-transform: uppercase;
 	}
 
-		@media screen and (max-width: 1680px) {
-
-			body, input, select, textarea {
-				font-size: 11pt;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			body, input, select, textarea {
-				font-size: 10pt;
-				line-height: 1.75;
-			}
-
-		}
-
 	a {
 		-moz-transition: color 0.2s ease, border-color 0.2s ease;
 		-webkit-transition: color 0.2s ease, border-color 0.2s ease;
@@ -221,14 +188,6 @@
 		font-size: 1em;
 	}
 
-	@media screen and (max-width: 480px) {
-
-		h1 {
-			font-size: 1.65em;
-		}
-
-	}
-
 	sub {
 		font-size: 0.8em;
 		position: relative;
@@ -248,64 +207,6 @@
 	}
 
 /* Form */
-
-	form {
-		margin: 0 0 1.5em 0;
-	}
-
-		form > .field {
-			margin: 0 0 1.5em 0;
-		}
-
-			form > .field > :last-child {
-				margin-bottom: 0;
-			}
-
-	label {
-		color: #313f47;
-		display: block;
-		font-size: 0.9em;
-		margin: 0 0 0.75em 0;
-	}
-
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="tel"],
-	select,
-	textarea {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		border-radius: 4px;
-		border: solid 1px #c8cccf;
-		color: inherit;
-		display: block;
-		outline: 0;
-		padding: 0 1em;
-		text-decoration: none;
-		width: 100%;
-	}
-
-		input[type="text"]:invalid,
-		input[type="password"]:invalid,
-		input[type="email"]:invalid,
-		input[type="tel"]:invalid,
-		select:invalid,
-		textarea:invalid {
-			box-shadow: none;
-		}
-
-		input[type="text"]:focus,
-		input[type="password"]:focus,
-		input[type="email"]:focus,
-		input[type="tel"]:focus,
-		select:focus,
-		textarea:focus {
-			border-color: #68c1b3;
-		}
-
 	.select-wrapper {
 		text-decoration: none;
 		display: block;
@@ -338,113 +239,6 @@
 		.select-wrapper select::-ms-expand {
 			display: none;
 		}
-
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select {
-		height: 2.75em;
-	}
-
-	textarea {
-		padding: 0.75em 1em;
-	}
-
-	input[type="checkbox"],
-	input[type="radio"] {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		display: block;
-		float: left;
-		margin-right: -2em;
-		opacity: 0;
-		width: 1em;
-		z-index: -1;
-	}
-
-		input[type="checkbox"] + label,
-		input[type="radio"] + label {
-			text-decoration: none;
-			color: #414f57;
-			cursor: pointer;
-			display: inline-block;
-			font-size: 1em;
-			font-weight: 300;
-			padding-left: 2.4em;
-			padding-right: 0.75em;
-			position: relative;
-		}
-
-			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
-			}
-
-			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
-				border-radius: 4px;
-				border: solid 1px #c8cccf;
-				content: '';
-				display: inline-block;
-				height: 1.65em;
-				left: 0;
-				line-height: 1.58125em;
-				position: absolute;
-				text-align: center;
-				top: 0.15em;
-				width: 1.65em;
-			}
-
-		input[type="checkbox"]:checked + label:before,
-		input[type="radio"]:checked + label:before {
-			color: #68c1b3;
-			content: '\f00c';
-		}
-
-		input[type="checkbox"]:focus + label:before,
-		input[type="radio"]:focus + label:before {
-			border-color: #68c1b3;
-		}
-
-	input[type="checkbox"] + label:before {
-		border-radius: 4px;
-	}
-
-	input[type="radio"] + label:before {
-		border-radius: 100%;
-	}
-
-	::-webkit-input-placeholder {
-		color: #616f77 !important;
-		opacity: 1.0;
-	}
-
-	:-moz-placeholder {
-		color: #616f77 !important;
-		opacity: 1.0;
-	}
-
-	::-moz-placeholder {
-		color: #616f77 !important;
-		opacity: 1.0;
-	}
-
-	:-ms-input-placeholder {
-		color: #616f77 !important;
-		opacity: 1.0;
-	}
-
-	.formerize-placeholder {
-		color: #616f77 !important;
-		opacity: 1.0;
-	}
 
 /* Icon */
 
@@ -564,14 +358,6 @@
 					ul.icons li a:hover {
 						border-color: #68c1b3;
 					}
-
-			@media screen and (max-width: 480px) {
-
-				ul.icons li a:before {
-					font-size: 1.5rem;
-				}
-
-			}
 
 		ul.actions {
 			cursor: default;
@@ -749,8 +535,6 @@
 				background: #c8cccf;
 			}
 
-		@media screen and (max-width: 480px) {
-
 			#main {
 				min-width: 0;
 				width: 100%;
@@ -843,13 +627,6 @@
 			display: block;
 		}
 
-		@media screen and (max-width: 360px) {
-
-			#wrapper {
-				padding: 0.75em;
-			}
-
-		}
 
 		body.is-ie #wrapper {
 			height: 100%;
