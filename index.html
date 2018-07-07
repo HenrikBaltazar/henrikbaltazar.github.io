@@ -6,62 +6,40 @@
 -->
 <html>
 	<head>
-    <!-- gtag.js - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11387681601"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-113876816-1');
-    </script>
-    <!-- End of Analytics script -->
 		<title>Henrik Baltazar & Why should you hire me!</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type 'text/css'>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/menu.js"></script>
 		<link rel="icon" type="image/png" href="images/favicon.png" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-loading">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-							<h1>Henrik Baltazar</h1>
-							<p>Eletronic Engineering and Development</p>
-						</header>
-
-						<footer>
-							<ul class="icons">
-								<li><a href="https://twitter.com/baltazar_pfv" class="fa-twitter">Twitter</a></li>
-								<li><a href="https://www.instagram.com/baltazar_pfv/" class="fa-instagram">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/henrik-baltazar-163923127/?ppe=1" class="fa-linkedin">Linkedin</a></li>
-                <li><a href="https://github.com/henrikbaltazar" class="fa-github">Github</a></li>
-							</ul>
-							<a href="/blog/index.html" /><button type="button" class="btn">See me posting!</button>
-						</footer>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Henrik Gomes Baltazar</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-		<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
-
+	<body>
+		<div class="main_page">
+			<img src="images/avatar.jpg" class="avatar">
+		</div>
+		<i class="fa fa-bars toggle_menu"></i>
+		<div class="sidebar_menu">
+			<i class="fa fa-times"></i>
+			<center>
+				<a href=""><h1 class="boxed_item">HENRIK <span class="logo_bold">BALTAZAR</span></h1></a>
+				<h2 class="logo_title">Electronics Engineering Student</h2>
+			</center>
+			<ul class="navigation_selection">
+				<li class="navigation_item">PROFILE</li>
+				<li class="navigation_item">EDUCATION</li>
+				<li class="navigation_item">WORK XP</li>
+				<li class="navigation_item">SKILLS</li>
+				<li class="navigation_item">INTERESTS</li>
+			</ul>
+			<center>
+				<a href='http://zenitesolar.com'><h1 class="boxed_item boxed_item_smaller">
+					<i class="fa fa-anchor"></i>
+						ZENITE
+				</h1></a>
+			</center>
+		</div>
 	</body>
 </html>
