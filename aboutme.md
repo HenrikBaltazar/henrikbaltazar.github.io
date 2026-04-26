@@ -15,4 +15,4 @@ Got to IT aged 18 years old as helpdesk trainee and hired as SysAdmin 6 months l
 3. **It was never by chance:** Was the 'lucky guy' behind a few High priority and High severity bugs found on key products, some of them living for years on the software code without being discovered.
 
 ### What's next?
-There's always room for growth, still seeking to master QA by day and find the software developer in me by night.
+There's always room for growth, still seeking to master QA by day and improving software developer by night.
