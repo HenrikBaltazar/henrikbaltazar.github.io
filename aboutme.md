@@ -1,6 +1,6 @@
 ---
 layout: page
-title: whoami
+title: $whoami
 subtitle: Henrik Baltazar
 ---
 
@@ -14,5 +14,11 @@ Got to IT aged 18 years old as helpdesk trainee and hired as SysAdmin 6 months l
 2. **High pressure project:** Had the opportunity to work close with Chinese hardware suppliers on-site to build dozens of products within 2 months of a work journey having imported knowledge and technology to my company, where i've learnt the power of sharing knowledge, being trusted to travel the world to build, learn and spread information across multidisciplinary teams.
 3. **It was never by chance:** Was the 'lucky guy' behind a few High priority and High severity bugs found on key products, some of them living for years on the software code without being discovered.
 
+### Interests
+- Networks
+- Embedded systems
+- IoT
+- Computer Vision
+
 ### What's next?
-There's always room for growth, still seeking to master QA by day and improving software developer by night.
+There's always room for growth. I'm still seeking to master QA by day and improving software development skills by night.
