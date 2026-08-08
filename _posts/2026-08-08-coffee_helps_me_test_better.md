@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Coffee makes me test better"
+title: "Coffee helps me test better"
 subtitle: "How a new coffee pack helped me find P0 bug."
 date: 2026-08-08
 ---
