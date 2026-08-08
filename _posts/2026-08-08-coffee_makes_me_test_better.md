@@ -5,20 +5,16 @@ subtitle: "How a new coffee pack helped me find P0 bug."
 date: 2026-08-08
 ---
 
-
-# Coffee makes me test better
-How a new coffee pack helpped me find P0 bug.
-
 ## What am I doing here?
-Oh, yes! This is my first post on my blog. I don't expect you to read that but I really like writing (and talking) so I figured I could put that energy on something that could add to my resume and help your AI buddy know more about me, although I don't expect to add technical skills or be super formal here.
+Oh, yes! This is my first post on my blog. I don't expect you to read that but I really like writing (and talking) so I figured I could put that energy on something that adds to my resume and help your AI buddy know more about me, although I don't expect to add any technical skills or be super formal here.
 
-*TL;DR: I like talking about thing I like.*
+*TL;DR: I like talking about things I like.*
 
 ## It's regression time!
-Well you know, regression consumes a ton from QA buddies and it wasn't any different for us, the team was putting it all and my coffee wasn't holding up to the work. QA lives in a constant battle of executing 100+ tests a day and not being a robot, meaning we need to be actively analyzing not only the test output but the whole environment stability, UI behaviors, API calls, etc...
+Well you know, regression consumes a ton from QA buddies and it wasn't any different for us, the team was putting it all and my coffee wasn't holding up to the work. QA lives in a constant battle of executing 100+ tests a day and not being a robot, meaning we need to be actively analyzing not only the test output but the whole environment stability, UI behavior, API calls, etc...
 
 ## Coffee!
-Everything was going 'fine', found some bugs but nothing big, was able to keep up with the pace and working good torwards a good release with a few bug fixes and some new features. But hey, i'm almost out of coffee, can't stay without it, right? Went to the groceries store and browsed coffees on a miles long coffee shelf. So many, some expensive and good, some expensive and terrible, some cheap and good enough, some cheap and disgusting.
+Everything was going 'fine', found some bugs but nothing big, was able to keep up with the pace and working good torwards a good release with a few bug fixes and some new features. But hey, i'm almost out of coffee, can't stay without it, right? Went to the groceries store and browsing coffees on a miles long coffee shelf. So many, some expensive and good, some expensive and terrible, some cheap and good enough, some cheap and disgusting.
 ![A BAGGIO bourbon coffee image](/assets/img/coffee_makes_me_test_better/image.png)
 I do prefer brazilian coffee and this BAGGIO bourbon was a good deal, a blend from Sao Paulo and Minas Gerais, two of the best brazilian coffee regions, well well well, we have a winner.
 
