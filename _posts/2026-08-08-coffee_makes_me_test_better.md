@@ -15,12 +15,20 @@ Well you know, regression consumes a ton from QA buddies and it wasn't any diffe
 
 ## Coffee!
 Everything was going 'fine', found some bugs but nothing big, was able to keep up with the pace and working good torwards a good release with a few bug fixes and some new features. But hey, i'm almost out of coffee, can't stay without it, right? Went to the groceries store and browsing coffees on a miles long coffee shelf. So many, some expensive and good, some expensive and terrible, some cheap and good enough, some cheap and disgusting.
+
+
 ![A BAGGIO bourbon coffee image](/assets/img/2026-08-08-coffee_makes_me_test_better/image.png)
+
+
 I do prefer brazilian coffee and this BAGGIO bourbon was a good deal, a blend from Sao Paulo and Minas Gerais, two of the best brazilian coffee regions, well well well, we have a winner.
 
 ### How to make a good coffee?
 I bought a Bialetti last i've been to Italy and I really like that but, how much coffee do I add? Check the side of the coffee packing, that says 15g makes 2 cups, I have a 6 cups bialetti so I would need 45g of coffee... dude... 
+
+
 ![Lame math meme pic](/assets/img/2026-08-08-coffee_makes_me_test_better/image-1.png)
+
+
 I was used to 15g for the whole 6 cups, thats almost 3 times of what I'm used to. And thats too much... Ok. lets do twice then. ¯\\_(ツ)_/¯
 
 *It doesn't even fit, ended up making with 25g*
