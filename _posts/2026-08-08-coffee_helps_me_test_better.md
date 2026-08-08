@@ -24,12 +24,10 @@ I do prefer brazilian coffee and this BAGGIO bourbon was a good deal, a blend fr
 
 ### How to make a good coffee?
 I bought a Bialetti last i've been to Italy and I really like that but, how much coffee do I add? Check the side of the coffee packing, that says 15g makes 2 cups, I have a 6 cups bialetti so I would need 45g of coffee... dude... 
-
+I was used to 15g for the whole 6 cups, thats almost 3 times of what I'm used to. And thats too much... Ok. lets do twice then. ¯\\_(ツ)_/¯
 
 ![Lame math meme pic](/assets/img/2026-08-08-coffee_makes_me_test_better/image-1.png)
 
-
-I was used to 15g for the whole 6 cups, thats almost 3 times of what I'm used to. And thats too much... Ok. lets do twice then. ¯\\_(ツ)_/¯
 
 *It doesn't even fit, ended up making with 25g*
 ## BUGS EVERYWHERE!!
@@ -39,7 +37,7 @@ That was clearly a mistake. My stomachs gonna regret that, but man it was good.
 
 Back at regression.
 
-The right first test and I found a bug One more test, one more bug Third one, third bug. At the fourth bug I thought I was seeing things, had to take a step back, took notes and think "Ok, i'll check that later" but then **found a P0 bug**, oh man... first time in my whole carreer I found five bugs
+The right first test and I found a bug One more test, one more bug Third one, third bug. At the fourth bug I thought I was seeing things, had to take a step back, took notes and thought "Ok, i'll check that later" but then **found a P0 bug**, oh man... first time in my whole carreer I found five bugs in a row while on regression. Its like when you're doing the lawn and hit a rock so you stop, remove it, restart and immediately hit again 5 consecutive times.
 
 ## Wrap up
-It was finally the last one, that coffee was really strong but boosted me a ton. I sorted all bugs out at the end and right now I'm still writing the tickets, doesn't feel the coffee effect anymore and can finally call it a day.
+The fifth was finally the last one, that coffee was really strong but boosted me a ton. I sorted all bugs out at the end and right now I'm still writing tickets, don't feel the coffee effect anymore and can finally call it a day.
