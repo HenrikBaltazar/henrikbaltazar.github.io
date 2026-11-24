@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Recorte automático de etiquetas do Mercado Livre para impressora térmica 100×150mm, 100% no navegador e com impressão imediata.">
+  <title>Etiqueta ML 100×150mm — Recorte e Impressão Automática</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="/etiqueta-ml/styles.css">
+</head>
+<body>
+  <div id="drop-overlay" class="drop-overlay" hidden aria-hidden="true">
+    <div class="drop-overlay-card">
+      <svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3v12"></path>
+        <path d="m7 10 5 5 5-5"></path>
+        <path d="M5 20h14"></path>
+      </svg>
+      <p>Solte o PDF da etiqueta para recortar e imprimir</p>
+    </div>
+  </div>
+
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true">
+          <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+            <path d="M8 7h8"></path>
+            <path d="M8 11h8"></path>
+            <path d="M8 15h3"></path>
+            <path d="M14 15h2v2h-2z"></path>
+          </svg>
+        </span>
+        <div>
+          <h1>Etiqueta ML <span class="dim-tag">100×150mm</span></h1>
+          <p class="subtitle">Recorta o PDF do Mercado Livre, remove a página extra e imprime direto na térmica.</p>
+        </div>
+      </div>
+      <div class="privacy-pill" aria-label="Processamento local no navegador">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+        </svg>
+        <span>100% local no navegador</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="upload-section" aria-labelledby="upload-heading">
+        <h2 id="upload-heading" class="visually-hidden">Enviar arquivo PDF da etiqueta</h2>
+
+        <label id="dropzone" class="dropzone" for="pdf-input">
+          <input id="pdf-input" class="visually-hidden" type="file" accept="application/pdf,.pdf" multiple>
+          <span class="dropzone-icon" aria-hidden="true">
+            <svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <path d="M14 2v6h6"></path>
+              <path d="M12 18v-6"></path>
+              <path d="m9 15 3-3 3 3"></path>
+            </svg>
+          </span>
+          <span class="dropzone-title">Arraste o PDF da etiqueta aqui</span>
+          <span class="dropzone-hint">ou clique para selecionar · aceita vários PDFs de uma vez · também funciona com <kbd>Ctrl</kbd>+<kbd>V</kbd></span>
+          <span class="dropzone-cta">Selecionar PDF</span>
+        </label>
+
+        <div id="status-banner" class="status-banner" role="status" aria-live="polite" hidden>
+          <span id="status-icon" class="status-icon" aria-hidden="true"></span>
+          <div class="status-text">
+            <strong id="status-title"></strong>
+            <span id="status-detail"></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="result-section" class="result-section" aria-labelledby="result-heading" hidden>
+        <div class="result-toolbar">
+          <div>
+            <h2 id="result-heading">Etiqueta pronta para impressão</h2>
+            <p id="result-meta" class="result-meta"></p>
+          </div>
+          <div class="result-actions">
+            <button id="btn-print" type="button" class="btn btn-primary">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9V2h12v7"></path>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              <span>Imprimir</span>
+            </button>
+            <button id="btn-download" type="button" class="btn btn-secondary">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <path d="m7 10 5 5 5-5"></path>
+                <path d="M12 15V3"></path>
+              </svg>
+              <span>Baixar PDF</span>
+            </button>
+            <button id="btn-open" type="button" class="btn btn-ghost">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+              </svg>
+              <span>Abrir PDF</span>
+            </button>
+            <button id="btn-clear" type="button" class="btn btn-ghost">Limpar</button>
+          </div>
+        </div>
+
+        <div id="preview-grid" class="preview-grid" aria-label="Prévia das etiquetas recortadas"></div>
+      </section>
+
+      <section class="settings-section" aria-label="Configurações de recorte e impressão">
+        <details id="settings-details" class="settings-card">
+          <summary class="settings-summary">
+            <span class="settings-summary-title">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+              <span>Ajustes da etiqueta e impressão</span>
+            </span>
+            <span id="settings-summary-meta" class="settings-summary-meta">100×150mm · Auto-imprimir ligado</span>
+          </summary>
+
+          <form id="settings-form" class="settings-body">
+            <fieldset class="settings-group">
+              <legend>Comportamento automático</legend>
+
+              <label class="checkbox-row" for="opt-auto-print">
+                <input type="checkbox" id="opt-auto-print" checked>
+                <span>Abrir diálogo de impressão automaticamente ao inserir PDF</span>
+              </label>
+
+              <label class="checkbox-row" for="opt-skip-summary">
+                <input type="checkbox" id="opt-skip-summary" checked>
+                <span>Remover páginas de lista de separação / resumo de venda</span>
+              </label>
+
+              <label class="checkbox-row" for="opt-drop-last">
+                <input type="checkbox" id="opt-drop-last" checked>
+                <span>Sempre remover a última página quando o PDF tiver 2 ou mais páginas</span>
+              </label>
+
+              <label class="checkbox-row" for="opt-split-multi">
+                <input type="checkbox" id="opt-split-multi" checked>
+                <span>Separar automaticamente múltiplas etiquetas na mesma página (lote)</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="settings-group">
+              <legend>Dimensões da etiqueta térmica</legend>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="opt-width">Largura (mm)</label>
+                  <input type="number" id="opt-width" min="40" max="210" step="1" value="100" inputmode="numeric">
+                </div>
+                <div class="field">
+                  <label for="opt-height">Altura (mm)</label>
+                  <input type="number" id="opt-height" min="40" max="297" step="1" value="150" inputmode="numeric">
+                </div>
+                <div class="field">
+                  <label for="opt-margin">Margem interna (mm)</label>
+                  <input type="number" id="opt-margin" min="0" max="15" step="0.5" value="2" inputmode="decimal">
+                </div>
+                <div class="field">
+                  <label for="opt-print-mode">Modo de impressão</label>
+                  <select id="opt-print-mode">
+                    <option value="pdf" selected>PDF vetorial (recomendado)</option>
+                    <option value="page">Página direta (@page 100×150mm)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="settings-footer">
+                <p class="settings-tip">Dica: na janela de impressão, confirme o papel <strong>100 × 150 mm</strong> e escala <strong>100% / Tamanho real</strong>.</p>
+                <button id="btn-reset-settings" type="button" class="btn btn-ghost btn-sm">Restaurar padrão</button>
+              </div>
+            </fieldset>
+          </form>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>O processamento acontece inteiramente no seu navegador usando recorte vetorial — códigos de barras e QR codes mantêm nitidez máxima.</p>
+    </footer>
+  </div>
+
+  <!-- Contêiner invisível usado apenas no modo de impressão direta (@page) -->
+  <div id="print-sheet" class="print-sheet" aria-hidden="true"></div>
+
+  <!-- Iframe oculto (fora da tela, não display:none) para impressão vetorial do PDF -->
+  <iframe id="print-frame" class="print-frame" title="Impressão da etiqueta" tabindex="-1"></iframe>
+
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js" defer></script>
+  <script type="module" src="/etiqueta-ml/app.js"></script>
+</body>
+</html>

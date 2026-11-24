@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Ferramentas rápidas 100% no navegador por Henrik Baltazar.">
+  <title>Ferramentas — Henrik Baltazar</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    :root {
+      --bg-light: #f6f7f9;
+      --surface-light: #ffffff;
+      --border-light: #d7dde6;
+      --text-light: #111827;
+      --text-muted-light: #4b5563;
+      --brand-light: #1d4ed8;
+      --ml-yellow-light: #ffe600;
+      --ml-ink-light: #1f2937;
+
+      --bg-dark: #0f141c;
+      --surface-dark: #161d27;
+      --border-dark: #2c384a;
+      --text-dark: #f1f5f9;
+      --text-muted-dark: #94a3b8;
+      --brand-dark: #60a5fa;
+      --ml-yellow-dark: #facc15;
+      --ml-ink-dark: #111827;
+
+      --bg: var(--bg-light);
+      --surface: var(--surface-light);
+      --border: var(--border-light);
+      --text: var(--text-light);
+      --text-muted: var(--text-muted-light);
+      --brand: var(--brand-light);
+      --ml-yellow: var(--ml-yellow-light);
+      --ml-ink: var(--ml-ink-light);
+
+      @media (prefers-color-scheme: dark) {
+        --bg: var(--bg-dark);
+        --surface: var(--surface-dark);
+        --border: var(--border-dark);
+        --text: var(--text-dark);
+        --text-muted: var(--text-muted-dark);
+        --brand: var(--brand-dark);
+        --ml-yellow: var(--ml-yellow-dark);
+        --ml-ink: var(--ml-ink-dark);
+      }
+
+      @supports (color: light-dark(white, black)) {
+        --bg: light-dark(var(--bg-light), var(--bg-dark));
+        --surface: light-dark(var(--surface-light), var(--surface-dark));
+        --border: light-dark(var(--border-light), var(--border-dark));
+        --text: light-dark(var(--text-light), var(--text-dark));
+        --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
+        --brand: light-dark(var(--brand-light), var(--brand-dark));
+        --ml-yellow: light-dark(var(--ml-yellow-light), var(--ml-yellow-dark));
+        --ml-ink: light-dark(var(--ml-ink-light), var(--ml-ink-dark));
+      }
+
+      color-scheme: light dark;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .shell {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      margin: 6px 0 0;
+      color: var(--text-muted);
+    }
+
+    .tools-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .tool-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px;
+      border-radius: 16px;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .tool-card:hover {
+      border-color: var(--brand);
+      transform: translateY(-1px);
+    }
+
+    .tool-card:focus-visible {
+      outline: 3px solid var(--brand);
+      outline-offset: 2px;
+    }
+
+    .tool-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background-color: var(--ml-yellow);
+      color: var(--ml-ink);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .tool-card h2 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .tool-card p {
+      margin: 4px 0 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--brand);
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>Ferramentas</h1>
+      <p>Utilitários rápidos que rodam 100% no navegador.</p>
+    </header>
+
+    <main>
+      <ul class="tools-list">
+        <li>
+          <a class="tool-card" href="/etiqueta-ml/">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+                <path d="M8 7h8"></path>
+                <path d="M8 11h8"></path>
+                <path d="M8 15h3"></path>
+                <path d="M14 15h2v2h-2z"></path>
+              </svg>
+            </span>
+            <div>
+              <h2>Etiqueta ML 100×150mm</h2>
+              <p>Recorta automaticamente o PDF do Mercado Livre, remove a página de separação e envia para a impressora térmica.</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <a href="https://henrik.dev.br">← Voltar para henrik.dev.br</a>
+    </footer>
+  </div>
+</body>
+</html>
